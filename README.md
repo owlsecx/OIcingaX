@@ -18,21 +18,18 @@
 
 ## 📌 Overview
 
-Icinga 2 / Icinga Web 2 / Nagios / NRPE / NSClient++ configuration hardening auditor
+OIcingaX — Monitoring Configuration Hardening Auditor. It provides stdlib Icinga 2 DSL / INI / Nagios cfg / htpasswd parsers. Built-in demo/self-test paths and severity gates help validate detections without touching production when those flags are used.
 
 ---
 
 ## ✨ Features
 
 - Stdlib Icinga 2 DSL / INI / Nagios cfg / htpasswd parsers
-- Icinga 2 — ApiListener accept_config / accept_commands, ticket_salt, bind_host, TLS protocolmin / cipher_list, ApiUser passwords & '*' permissions, zones / endpoints, IDO / IcingaDB / writer TLS & passwords, constants.conf secrets, PKI key permissions, shell-command injection
+- Icinga 2 — ApiListener accept_config / accept_commands, ticket_salt, bind_host, TLS protocolmin / cipher_list, ApiUser passwords & '*' permissions, zones / endpoints, IDO / IcingaDB / writer TLS & passwords, constants.co
 - Icinga Web 2 — resources / authentication / roles
 - Nagios Core — external commands, command pipe perms, cgi.cfg authorized_for_* = *, default_user_name, htpasswd
 - NRPE — dont_blame_nrpe, bash substitution, allowed_hosts, SSL / ADH, nrpe_user root, command[] args & plugin perms
 - NSClient++ — allowed hosts, arguments, nasty chars, TLS
-- File ownership / permission checks; --root offline trees
-- Export TXT / Markdown / JSON / CSV / SARIF 2.1.0
-- Self-test --demo, CI gates --fail-on / --min-severity
 
 ---
 
@@ -46,7 +43,10 @@ Icinga 2 / Icinga Web 2 / Nagios / NRPE / NSClient++ configuration hardening aud
 ## 🚀 Usage
 
 ```bash
-./OIcingaX
+./OIcingaX                                     # interactive menu
+./OIcingaX --scan -r /path/to/root
+./OIcingaX --demo
+./OIcingaX --help
 ```
 
 ---
